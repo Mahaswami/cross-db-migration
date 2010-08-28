@@ -11,7 +11,7 @@ One way to load the ms_base prior to cross db migration is rename the ms_base fo
 In some specific case, the migration written for one database won't suite good for other database.
 For Example, If you generate a migration to create a table in mysql (the table name length with more
 than 30 characters), this migration works fine with Mysql. If you try to use the same migration file 
-to migrate a oracle database, the migration will rais an exception, stating the table name can not be more 
+to migrate a oracle database, the migration will raise an exception, stating the table name can not be more 
 than 30 characters.
 
 This cross db migration will help us to write a migration which will work fine with Mysql, Oracle and 
@@ -58,7 +58,7 @@ this plugin will raise an exception even if you use Mysql or DB2
 
 3. Rename Table
 
-  a. In DB2 we cannot rename a table, Hence this plugin will restict us to rename a table.
+  a. In DB2 we cannot rename a table, Hence this plugin will restrict us to rename a table.
   Note: The work around to rename a table is create a temp table transfer the data to the temp table and drop, recreate the
          original table and transfer the data back. 
 
@@ -77,7 +77,7 @@ this plugin will raise an exception even if you use Mysql or DB2
 
   a. recompile the triggers in Oracle if a column has been removed from a table which has a trigger.
 
-7. Schmema dumper:
+7. Schema dumper:
 
   This plugin supports to 
   a. dump oracle functions, triggers and packages
