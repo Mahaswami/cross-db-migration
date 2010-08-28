@@ -2,14 +2,7 @@
 
 == Description
 
-In some specific case, the migration written for one database won't suite good for other database.
-For Example, If you generate a migration to create a table in mysql (the table name length with more
-than 30 characters), this migration works fine with Mysql. If you try to use the same migration file 
-to migrate a oracle database, the migration will raise an exception, stating the table name can not be more 
-than 30 characters.
-
-This cross db migration will help us to write a migration which will work fine with Mysql, Oracle and 
-DB2 databases.
+This plugin allows migrations written once to be run without any changes on MySQL, Oracle and DB2. Though it appears to be not a big deal since the migration syntax is a DSL, in practice Rails migrations written for one RDBMS won't simply work on other databases. This is due to the fact that data base types are named differently in different databases, DDL syntax differences, and number of other subtle differences.
 
 == Dependency
 
