@@ -1,11 +1,5 @@
 = Cross DB Migration
 
-== Dependency
-
-Cross Db Migration needs ms_base plugin.
-Kindly make sure the ms_base plugin is loaded prior to this plugin.
-One way to load the ms_base prior to cross db migration is rename the ms_base folder to 000_ms_base.
-
 == Description
 
 In some specific case, the migration written for one database won't suite good for other database.
@@ -16,6 +10,13 @@ than 30 characters.
 
 This cross db migration will help us to write a migration which will work fine with Mysql, Oracle and 
 DB2 databases.
+
+== Dependency
+
+Cross Db Migration needs ms_base plugin.
+Kindly make sure the ms_base plugin is loaded prior to this plugin.
+One way to load the ms_base prior to cross db migration is rename the ms_base folder to 000_ms_base.
+
 
 == How it works
 
