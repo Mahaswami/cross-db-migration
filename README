@@ -37,17 +37,12 @@ this plugin will raise an exception even if you use Mysql or DB2
     If you are using composite primary key then you can give 30 characters length name by specifying the parameter 
     :skip_table_name_length_check
 
-    Note: The reason why we are restricting 26 characters length name is if you are using surrogate primary key
-          Oracle will create an index object with name table_name_idx, In oracle the index name also should be less than 
-          or equal to 30 characters.
+    Note: The reason why we are restricting 26 characters length name is if you are using surrogate primary key Oracle will create an index object with name table_name_idx, In oracle the index name also should be less than or equal to 30 characters.
 
   b. Adding the camel case table name as table comment for Oracle Database
 
-     In Oracle dictionary tables the table name will be stored in upper case (even if we specify the table name in camel case),
-     if we want to dump the structure with the table name how we specified in the migration we need to store the table name format  
-     some where. 
-     This plugin stores the table name as we specified (in the migration) in the comment table and use the table comment to get the  
-     formatted table name during schema dump.
+     In Oracle dictionary tables the table name will be stored in upper case (even if we specify the table name in camel case), if we want to dump the structure with the table name how we specified in the migration we need to store the table name format  some where. 
+     This plugin stores the table name as we specified (in the migration) in the comment table and use the table comment to get the formatted table name during schema dump.
 
 2. add_column
 
@@ -57,11 +52,9 @@ this plugin will raise an exception even if you use Mysql or DB2
      This plugin will restrict us to specifying :limit for integer datatype (DB2 will raise an error if we specify :limit for  
      integer datatype)
   c. Supported addition of NOT NULL column is DB2
-     In DB2 database, adding a not null column to an existing table (even if the table doesn't have data) is not straight forward. 
-     This plugin handled the addition of NOT NULL column for DB2 database (by usine add_column)
-  d. Oracle - recompile the triggers
-     If a table has a trigger and if we add a column the trigger will become unusable, this plugin will take care of recompiling the
-     trigger When ever we add a new column to a table.
+     In DB2 database, adding a not null column to an existing table (even if the table doesn't have data) is not straight forward. This plugin handled the addition of NOT NULL column for DB2 database (by usine add_column)
+  d. Oracle - recompile the triggers 
+     If a table has a trigger and if we add a column the trigger will become unusable, this plugin will take care of recompiling the trigger When ever we add a new column to a table.
 
 3. Rename Table
 
@@ -95,8 +88,15 @@ this plugin will raise an exception even if you use Mysql or DB2
 
 8. db_specific_integer_data_type
 
+== Issues
+
+Post issues via GitHub issues option.
+
+== Comments, discussion and feedback.
+
+We shall be setting up a google group. In the meantime, please send an email to opensource@mahaswami.com
 
 == Author
 
-Developed my Mahaswami Software, (opensource@mahaswami.com)
+Developed by Mahaswami Software, (opensource@mahaswami.com)
 
